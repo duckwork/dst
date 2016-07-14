@@ -271,7 +271,7 @@ typedef struct {
 	Colormap cmap;
 	Window win;
 	Drawable buf;
-	Atom xembed, wmdeletewin, netwmname, wmname, netwmpid;
+	Atom xembed, wmdeletewin, netwmname, netwmpid;
 	XIM xim;
 	XIC xic;
 	Draw draw;
@@ -3548,7 +3548,6 @@ xinit(void)
 	xw.xembed = XInternAtom(xw.dpy, "_XEMBED", False);
 	xw.wmdeletewin = XInternAtom(xw.dpy, "WM_DELETE_WINDOW", False);
 	xw.netwmname = XInternAtom(xw.dpy, "_NET_WM_NAME", False);
-	xw.wmname = XInternAtom(xw.dpy, "WM_NAME", False);
 	XSetWMProtocols(xw.dpy, xw.win, &xw.wmdeletewin, 1);
 
 	xw.netwmpid = XInternAtom(xw.dpy, "_NET_WM_PID", False);
@@ -3949,7 +3948,6 @@ xsettitle(char *p)
 			&prop);
 	XSetWMName(xw.dpy, xw.win, &prop);
 	XSetTextProperty(xw.dpy, xw.win, &prop, xw.netwmname);
-	XSetTextProperty(xw.dpy, xw.win, &prop, xw.wmname);
 	XFree(prop.value);
 }
 
