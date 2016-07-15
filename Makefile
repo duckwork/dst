@@ -31,6 +31,10 @@ clean:
 	@echo cleaning
 	@rm -f st ${OBJ} st-${VERSION}.tar.gz
 
+cleaner: clean
+	@echo really cleaning
+	@rm -f config.h
+
 dist: clean
 	@echo creating dist tarball
 	@mkdir -p st-${VERSION}

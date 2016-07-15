@@ -4387,6 +4387,7 @@ config_init(void)
 		XRESOURCE_LOAD_STRING("st.background", colorname[256]);
 		XRESOURCE_LOAD_STRING("st.foreground", colorname[257]);
 		XRESOURCE_LOAD_STRING("st.cursorColor", colorname[258]);
+		XRESOURCE_LOAD_STRING("st.rcColor", colorname[259]);
 		XRESOURCE_LOAD_STRING("st.termname", termname);
 		XRESOURCE_LOAD_STRING("st.shell", shell);
 		XRESOURCE_LOAD_INTEGER("st.xfps", xfps);
